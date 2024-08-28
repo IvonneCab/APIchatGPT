@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APIchatGPT.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label Text="ChatGPT MAUI App"
+               FontSize="32"
+               HorizontalOptions="Center" />
+
+            <!-- Cuadro de texto para preguntas -->
+            <Editor x:Name="QuestionEditor"
+                Placeholder="Escribe tu pregunta aquí..."
+                AutoSize="TextChanges"
+                HeightRequest="100"
+                VerticalOptions="FillAndExpand" />
+
+            <!-- Botón para enviar pregunta -->
+            <Button Text="Enviar"
+                Clicked="OnSendClicked"
+                HorizontalOptions="Center" />
+
+            <!-- Área de respuesta -->
+            <Label x:Name="ResponseLabel"
+               Text="Aquí aparecerá la respuesta..."
+               FontSize="18"
+               LineBreakMode="WordWrap"
+               VerticalOptions="FillAndExpand" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
